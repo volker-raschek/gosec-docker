@@ -1,6 +1,6 @@
 # GOSEC_VERSION
 # Only required to install a specifiy version
-GOSEC_VERSION?=v2.9.4 # renovate: datasource=github-releases depName=gosec lookupName=securego/gosec versioning=semver
+GOSEC_VERSION?=v2.9.6 # renovate: datasource=github-releases depName=gosec lookupName=securego/gosec versioning=semver
 
 # CONTAINER_RUNTIME
 # The CONTAINER_RUNTIME variable will be used to specified the path to a
