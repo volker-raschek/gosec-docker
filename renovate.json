@@ -1,0 +1,34 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "assignees": [ "volker.raschek" ],
+  "automergeStrategy": "merge-commit",
+  "automergeType": "pr",
+  "labels": [ "renovate" ],
+  "packageRules": [
+    {
+      "addLabels": [ "renovate/droneci", "renovate/automerge" ],
+      "automerge": true,
+      "matchManagers": "droneci",
+      "matchUpdateTypes": [ "minor", "patch"]
+    },
+    {
+      "addLabels": [ "renovate/gosec", "renovate/automerge" ],
+      "automerge": false,
+      "matchPackageNames": [ "gosec" ],
+      "matchManagers": [ "regex" ]
+    }
+  ],
+  "rebaseLabel": "renovate/rebase",
+  "rebaseWhen": "behind-base-branch",
+  "regexManagers": [
+    {
+      "description": "Update version",
+      "fileMatch": [
+        "^Makefile$"
+      ],
+      "matchStrings": [
+        "GOSEC_VERSION\\?=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) (lookupName=(?<lookupName>.*))? (versioning=(?<versioning>.*))?"
+      ]
+    }
+  ]
+}
