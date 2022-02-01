@@ -27,7 +27,7 @@
         "^Makefile$"
       ],
       "matchStrings": [
-        "GOSEC_VERSION\\?=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*) (lookupName=(?<lookupName>.*))? (versioning=(?<versioning>.*))?"
+        "GOSEC_VERSION\\?=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
       ]
     }
   ]
