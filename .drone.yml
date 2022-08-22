@@ -442,7 +442,7 @@ steps:
     password:
       from_secret: container_image_registry_password
     build_args:
-    - HELM_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=${DRONE_TAG}
     no_cache: true
 
 - name: email-notification
@@ -491,7 +491,7 @@ steps:
     password:
       from_secret: container_image_registry_password
     build_args:
-    - HELM_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=${DRONE_TAG}
     no_cache: true
 
 - name: email-notification
@@ -540,7 +540,7 @@ steps:
     password:
       from_secret: container_image_registry_password
     build_args:
-    - HELM_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=${DRONE_TAG}
     no_cache: true
 
 - name: email-notification
