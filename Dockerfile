@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.19.0-alpine AS build
+FROM docker.io/library/golang:1.19.1-alpine AS build
 
 ARG GOSEC_VERSION
 
