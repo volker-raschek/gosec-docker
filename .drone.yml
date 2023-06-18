@@ -417,12 +417,17 @@ name: latest-manifest
 clone:
   disable: true
 
+# docker.io/plugins/manifest only for amd64 architectures available
+node_selector:
+  kubernetes.io/os: linux
+  kubernetes.io/arch: amd64
+
 steps:
 - name: clone
   image: git.cryptic.systems/volker.raschek/git:1.2.1
 
 - name: build-manifest
-  image: docker.io/plugins/manifest:latest
+  image: docker.io/plugins/manifest:1.4.0
   settings:
     auto_tag: false
     ignore_missing: true
@@ -641,12 +646,17 @@ name: tagged-manifest
 clone:
   disable: true
 
+# docker.io/plugins/manifest only for amd64 architectures available
+node_selector:
+  kubernetes.io/os: linux
+  kubernetes.io/arch: amd64
+
 steps:
 - name: clone
   image: git.cryptic.systems/volker.raschek/git:1.2.1
 
 - name: build-manifest
-  image: docker.io/plugins/manifest:latest
+  image: docker.io/plugins/manifest:1.4.0
   settings:
     auto_tag: true
     ignore_missing: true
