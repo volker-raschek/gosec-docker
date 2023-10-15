@@ -597,7 +597,7 @@ steps:
     password:
       from_secret: git_cryptic_systems_container_registry_password
     build_args:
-    - GOSEC_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=v${DRONE_TAG}
 
 - name: email-notification
   environment:
@@ -657,7 +657,7 @@ steps:
     password:
       from_secret: git_cryptic_systems_container_registry_password
     build_args:
-    - GOSEC_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=v${DRONE_TAG}
 
 - name: email-notification
   environment:
@@ -717,7 +717,7 @@ steps:
     password:
       from_secret: git_cryptic_systems_container_registry_password
     build_args:
-    - GOSEC_VERSION=${DRONE_TAG}
+    - GOSEC_VERSION=v${DRONE_TAG}
 
 - name: email-notification
   environment:
