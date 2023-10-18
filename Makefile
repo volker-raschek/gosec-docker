@@ -9,8 +9,8 @@ CONTAINER_RUNTIME?=$(shell which podman)
 
 # GOSEC_IMAGE_REGISTRY_NAME
 # Defines the name of the new container to be built using several variables.
-GOSEC_IMAGE_REGISTRY_NAME:=docker.io
-GOSEC_IMAGE_REGISTRY_USER:=volkerraschek
+GOSEC_IMAGE_REGISTRY_NAME:=git.cryptic.systems
+GOSEC_IMAGE_REGISTRY_USER:=volker.raschek
 
 GOSEC_IMAGE_NAMESPACE?=${GOSEC_IMAGE_REGISTRY_USER}
 GOSEC_IMAGE_NAME:=gosec
