@@ -8,7 +8,6 @@
   ],
   "packageRules": [
     {
-      "addLabels": [ "renovate/jq", "renovate/automerge" ],
       "automerge": false,
       "matchPackageNames": [ "gosec" ],
       "matchManagers": [ "regex" ]
