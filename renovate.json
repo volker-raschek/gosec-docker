@@ -1,39 +1,17 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "assignees": [ "volker.raschek" ],
-  "labels": [ "renovate" ],
+  "extends": [
+    "local>volker.raschek/renovate-config:default#master",
+    "local>volker.raschek/renovate-config:container#master",
+    "local>volker.raschek/renovate-config:actions#master",
+    "local>volker.raschek/renovate-config:regexp#master"
+  ],
   "packageRules": [
     {
-      "addLabels": [ "renovate/droneci", "renovate/automerge" ],
-      "automerge": true,
-      "matchManagers": "droneci",
-      "matchUpdateTypes": [ "minor", "patch"]
-    },
-    {
-      "description": "Automatically update patch version of used container images in docker files",
-      "addLabels": [ "renovate/container-image", "renovate/automerge" ],
-      "automerge": true,
-      "matchManagers": [ "dockerfile" ],
-      "matchUpdateTypes": [ "patch" ]
-    },
-    {
-      "addLabels": [ "renovate/gosec", "renovate/automerge" ],
+      "addLabels": [ "renovate/jq", "renovate/automerge" ],
       "automerge": false,
       "matchPackageNames": [ "gosec" ],
       "matchManagers": [ "regex" ]
-    }
-  ],
-  "rebaseLabel": "renovate/rebase",
-  "rebaseWhen": "behind-base-branch",
-  "regexManagers": [
-    {
-      "description": "Update version",
-      "fileMatch": [
-        "^Makefile$"
-      ],
-      "matchStrings": [
-        "GOSEC_VERSION\\?=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)( lookupName=(?<lookupName>.*))?( versioning=(?<versioning>.*))?"
-      ]
     }
   ]
 }
